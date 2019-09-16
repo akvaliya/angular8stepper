@@ -1,0 +1,79 @@
+::ng-deep  .request-consult-section{
+    .mat-horizontal-stepper-header-container {
+         display: none;
+    }
+    .mat-horizontal-content-container {
+        padding-top: 24px;
+    }    
+}
+
+.stepper-container {
+    overflow-y: auto;
+}
+
+.med-stepper-header {
+    margin: 10px 0px 0px 0px;
+    z-index: 7;
+    button{
+        font-size: 12px;
+        //font-weight: bold;
+        &.mat-raised-button{
+            line-height: 30px;
+            padding: 0px 8px;
+            color: #fff;
+            margin: 5px;
+        }
+        &.step{
+            background-color: rgba(0, 0, 0, 0.54);
+             i {
+                display: none;
+             }
+        }
+        &.step-active{
+            background-color: #1ab394;
+            opacity: 0.7;
+        }
+        &.step-selected{
+            background-color:#1ab394;
+            opacity: 1;
+        }
+        &.step-invalid{
+            background-color:#ed5565;
+        }
+    }   
+}
+
+@media (max-width: 991px) {
+    .med-stepper-header {
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: auto;
+            line-height: 2;
+            position: relative;
+            font-size: 25px;
+            &.intake-step{                
+                i {
+                display: block;
+                }
+
+                .stepper-label {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .med-stepper-header {
+        margin: 0px 30px 0px 5px;
+        button {
+            min-width: 35px;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+        }
+    }
+}
